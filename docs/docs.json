@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "스프레드(Spread) 가이드",
+  "name": "Spread Product Guide",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -12,18 +12,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "스프레드 앱",
+          "anchor": "Spread App",
           "href": "https://app.spread.so/",
           "icon": "computer"
         },
         {
-          "anchor": "스프레드 설정 페이지",
+          "anchor": "Spread Settings Page",
           "href": "https://admin.spread.so/",
           "icon": "gear"
         },
         {
           "anchor": "Relate CRM",
-          "href": "https://www.relate.kr",
+          "href": "https://www.relate.so",
           "icon": "money-bill-trend-up"
         }
       ]
@@ -50,16 +50,16 @@
   "navbar": {
     "links": [
       {
-        "label": "스프레드 시작하기",
+        "label": "Get started with Spread",
         "href": "https://admin.spread.so/users/sign_up"
       },
       {
-        "label": "데모 신청하기",
-        "href": "https://relate.so/cal/workspaces/relate/teamkr"
+        "label": "Request a demo",
+        "href": "https://relate.so/cal/workspaces/relate/team"
       },
       {
-        "label": "문의하기",
-        "href": "mailto:we@relate.so"
+        "label": "Chat with us",
+        "href": "mailto:we@spread.so"
       }
     ]
   }

@@ -1,38 +1,40 @@
 ---
-title: "안전한 리스트 관리하기"
-description: "스프레드를 통해 구독자 리스트를 관리하는 방법을 알아보세요"
-sidebarTitle: "안전한 리스트 관리하기"
-"og:title": "리스트 관리하기 | 스프레드 프로덕트 가이드"
-"og:description": "스프레드를 통해 첫 이메일을 보내는 방법을 알아보세요"
+title: "Manage lists"
+description: "Learn how to manage your lists with Spread"
+sidebarTitle: "Manage lists"
+"og:title": "Manage lists | Spread Product Guide"
+"og:description": "Learn how to manage your lists with Spread"
 "og:image": "https://relateso.sirv.com/spread/spread-docs.png"
-"twitter:title": "리스트 관리하기 | 스프레드 프로덕트 가이드"
-"twitter:description": "스프레드를 통해 구독자 리스트를 관리하는 방법을 알아보세요"
+"twitter:title": "Manage lists | Spread Product Guide"
+"twitter:description": "Learn how to manage your lists with Spread"
 "twitter:image": "https://relateso.sirv.com/spread/spread-docs.png"
 ---
 
 ## Overview
 
-스프레드를 통해 구독자 리스트를 관리하는 방법을 알아봅니다. 발송 대상 구독자가 수천, 수만 명인데 지난 몇 개월 동안 이메일을 보내지 않았다면, 이메일을 보내기 전에 사전 웜업 및 클리닝 작업이 필요합니다. 임시/가짜 이메일 주소에게 이메일을 보내게 되면 Soft/Hard 바운스가 발생합니다. 너무 많은 바운스가 발생하면 이후 이메일 발송이 제한되고, 계정이 차단되거나 도메인 평판을 복구하는데 굉장히 오래걸리거나 불가능할 수도 있습니다.
+Learn how to manage your lists with Spread. If you have thousands or even tens of thousands of subscribers who haven't received emails in the past few months, you need to warm up your domain and clean up your list before sending emails. If you send emails to temporary/fake email addresses, you will experience soft/hard bounces. If too many bounces occur, your account may be restricted, blocked, or it may take a long time to restore your domain reputation.
 
-## 구독자 임포트/추가시 주의해야 할 것들
 
-이메일 주소(구독자)를 스프레드에 추가할 때는 다음을 지켜주세요.
 
-1. 사전에 이메일 수신 동의를 받은 구독자들만 추가하도록 합니다.
-2. 이메일 수신 동의 Form에도 Recaptcha, Botpoison 등의 보호 장치를 추가하여 봇을 차단하도록 합니다.
-3. (가능하다면) Double Opt-In 절차를 통해 이메일 수신 동의를 얻도록 합니다.
-4. 수신거부를 하거나 바운스가 된 이력이 있는 이메일 주소로는 이메일을 보내지 않도록 합니다.
+## Important things to remember when importing/adding subscribers
 
-### 스프레드는 자동으로 바운스, 구독상태관리를 하고 있습니다.
+When adding email addresses (subscribers) to Spread, please follow the following:
 
-스프레드를 통해 모든 이메일 (트랜잭션, 마케팅, 제품 업데이트 이메일)을 보내신다면, 바운스/수신거부 관리를 따로 해주지 않아도, 스프레드가 자동으로 관리하여 구독상태에 (바운스여부, 수신거부여부) 따라 이메일을 보내고 있습니다.
+1. Add only subscribers who have previously given email consent.
+2. Add protection devices like Recaptcha, Botpoison, etc. to the email consent form to block bots.
+3. (If possible) Use a double opt-in to get email consent from subscribers.
+4. Do not send emails to email addresses that have unsubscribed or have bounced.
 
-또한 캠페인 발송 중 발송 1,000건당 바운스 발생률이 5% 이상이면 자동으로 캠페인을 중단하고 안내드림으로 추가 피해를 줄이고 있습니다.
+### Spread automatically manages bounced contacts and subscription status.
 
-### 바운스가 될 가능성이 있는 이메일 주소 제거하기
+If you send all emails (transactional, marketing, product update emails) through Spread, Spread automatically manages bounced contacts and subscription status, so you don't need to manage them separately.
 
-스프레드에서는 등록되는 모든 구독자를 대상으로 자동 검사를 통해 바운스가 될 가능성이 있는 이메일 주소를 감지하고 있습니다. 단, 100% 정확도가 아닌 가능성을 예측하는 것이니 바운스를 100% 예방하지는 못합니다.
+If the bounce rate exceeds 5% of the number of emails sent, Spread automatically stops the campaign and sends an email to you to prevent further damage to your domain reputation.
 
-## 리스트 만들기
+### Spread flags bounced contacts automatically
 
-리스트는 이메일 캠페인을 보내고자 하는 구독자 목록을 의미합니다. 스프레드 앱 왼쪽 메뉴 상단에서 **리스트**를 클릭하여 리스트 페이지로 이동해서 새로운 리스트를 생성할 수 있습니다.
+Spread automatically checks all subscribers and detects email addresses that are likely to bounce. However, note that it is not 100% accurate, so it cannot prevent bounces 100%.
+
+## Create a list
+
+A list is a list of subscribers you want to send an email campaign to. You can create a new list by clicking **Lists** in the left menu in the Spread app.

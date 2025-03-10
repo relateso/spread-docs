@@ -1,104 +1,113 @@
 ---
-title: "커스텀 도메인 설정하기"
-description: "이메일 전송을 위한 커스텀 도메인을 설정하는 방법을 알아보세요"
-sidebarTitle: "커스텀 도메인 설정"
-"og:title": "커스텀 도메인 설정하기 | 스프레드 프로덕트 가이드"
-"og:description": "이메일 전송을 위한 커스텀 도메인을 설정하는 방법을 알아보세요"
+title: "Set up your custom sending domain"
+description: "How to set up a custom domain for sending emails."
+sidebarTitle: "Set up your sending domain"
+"og:title": "Set up your custom sending domain | Spread Product Guide"
+"og:description": "How to set up a custom domain for sending emails."
 "og:image": "https://relateso.sirv.com/spread/spread-docs.png"
-"twitter:title": "커스텀 도메인 설정하기 | 스프레드 프로덕트 가이드"
-"twitter:description": "이메일 전송을 위한 커스텀 도메인을 설정하는 방법을 알아보세요"
+"twitter:title": "Set up your custom sending domain | Spread Product Guide"
+"twitter:description": "How to set up a custom domain for sending emails."
 "twitter:image": "https://relateso.sirv.com/spread/spread-docs.png"
 ---
 
+
 ## Overview
 
-이메일 전송을 위한 커스텀 도메인을 설정하는 방법을 알아보세요.
+Learn how to set up a custom domain for sending emails. If you want to send emails with your own domain, you need to set up a custom domain in Spread.
 
 <Steps>
-  <Step title="커스텀 도메인 추가하기">
-    커스텀 도메인을 추가하는 방법을 알아보세요.
+  <Step title="Add a custom domain to Spread">
+    First, identify the domain you want to use for sending emails in Spread.
   </Step>
-  <Step title="DNS 레코드 업데이트하기">
-    DNS 레코드를 업데이트하여 Spread의 서버와 연결하는 방법을 알아보세요.
+  <Step title="Update your DNS record">
+    Next, update your DNS record to point to Spread's servers.
   </Step>
-  <Step title="도메인 인증하기">
-    도메인을 인증하여 정상적으로 작동하는지 확인하는 방법을 알아보세요.
+  <Step title="Verify your domain">
+    Finally, verify your domain to ensure that it's working correctly.
   </Step>
 </Steps>
 
+<Tip>
+**If you don't have a custom domain, you can still send emails with Spread's default domain, @spreadsend.com**.
+</Tip>
 
-### Step 1. 커스텀 도메인 추가하기
 
-스프레드에서 커스텀 도메인을 추가하는 방법을 알아보세요.
+### Step 1. Add a custom domain to Spread
 
-**워크스페이스 설정** -> **도메인** 페이지에서 도메인 설정을 확인할 수 있습니다.
+Go to **Workspace Settings** -> **Campaigns** to access the domain settings.
 
 <Note>
-**워크스페이스 설정은 어디에 있나요?**
+**Where can I find the workspace settings?**
 
-앱 상단 왼쪽 모서리에 있는 워크스페이스 이름을 클릭하고 **설정**을 클릭하거나 `Cmd + ,`를 눌러 확인할 수 있습니다.
-
+Click your workspace name in the top left corner in the app and click **Settings**, or use `Cmd + ,`
 </Note>
 
-#### 커스텀 도메인 추가하기
 
-사용을 원하는 커스텀 도메인을 이곳에서 추가합니다. 추가를 완료하면, DNS 레코드에 업데이트해야 하는 내용이 나오게 됩니다. 
+#### Add a custom domain
 
-### Step 2. DNS 레코드 업데이트하기
+Add the domain you want to use for sending emails in Spread. Once you add it, you will see the content you need to update in your DNS records.
 
-MX, SPF & DMARC, DKIM 레코드를 하나씩 복사하여 사용하고 있는 DNS Record 페이지에 붙여 넣습니다. 아래에는 Cloudflare와 GoDaddy를 예시로 들었는데, 혹시 다른 도메인 관리 페이지를 사용하셔서 추가적인 도움이 필요하시다면, we@relate.so 로 이메일 보내주시면 도와드리겠습니다.
+### Step 2. Update your DNS records
+
+Copy and paste the MX, SPF & DMARC, DKIM records one by one to the DNS Record page in your domain management page. 
+
+Below are examples of Cloudflare and GoDaddy, but if you are using another domain management page and need additional help, send an email to we@spread.so.
 
 <Info>
-스프레드 팀은 안정적인 도메인 관리를 위해 클라우드플레어(Cloudflare) 사용을 공식적으로 권장하고 있습니다 (무료). 만약 클라우드플레어를 사용하고 계시지 않다면, 현재 사용하고 계신 도메인 등록처에서 네임서버 이관으로 클라우드플레어 사용을 시작하실 수 있습니다.
+Spread recommends using Cloudflare (free) for stable domain management. If you are not using Cloudflare, you can start using it by transferring your domain to Cloudflare.
 </Info>
 
 <Accordion title="Cloudflare">
-DNS 레코드는 웹사이트 내 DNS 페이지에서 추가할 수 있습니다.
+First, go to the DNS page in your Cloudflare dashboard.
 
-**Add record**를 클릭한 뒤, **Type**을 (TXT, MX 또는 CNAME)을 선택한 다음 스프레드 도메인 설정 페이지에 있은 **Name** 및 **Value** 값을 붙여 넣습니다.
+Click **Add record** and select the type (TXT, MX or CNAME). Then, copy and paste the **Name** and **Value** from the Spread domain settings page.
 
-[Cloudflare DNS 레코드 가이드 링크](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records)
+Refer to the [Cloudflare DNS record guide](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records) for more information.
 
-마지막으로는 CNAME 레코드에 대해 프록시를 `DNS Only`로 설정해야 합니다. (오렌지 버튼)
+Finally, set the proxy to `DNS Only` for the CNAME record. (Orange button)
 
 </Accordion>
 <Accordion title="Namecheap">
-먼저 연결하고자 하는 도메인의 메뉴에서 `Advanced DNS` 페이지로 이동합니다.
+Go to the menu of the domain you want to connect and click `Advanced DNS` page.
 
-`Mail Settings`에서 **Custom MX**로 변경합니다. Namecheap과 Gmail/Gsuite 자동 연동을 사용하는 경우, 먼저 자동 연동을 해제한 뒤, 변경할 수 있습니다. 이후 `Save All Changes` 버튼을 클릭해서 저장합니다.
+In `Mail Settings`, change to **Custom MX**. If you are using Namecheap and Gmail/Gsuite auto-connect, first disconnect the auto-connect and then change it. After that, click `Save All Changes` button to save the changes.
 
-Gsuite 레코드가 이미 Verify된 경우, [이 문서](https://support.google.com/a/answer/174125)에서 적절한 MX 레코드를 확인해야 합니다. 
+If your Gsuite record is already verified, check the appropriate MX record in [this document](https://support.google.com/a/answer/174125).
 
-### 레코드 추가하는 방법
+### How to add records
 
-#### MX Record 추가하는 방법
+#### How to add MX Record
 
-`Mail Settings` 섹션에서 `Add new record` 클릭한 뒤, 스프레드에서 제공하는 MX Record 값을 Host와 Value에 각각 복사해서 붙여 넣으세요.
+Click `Add new record` in the `Mail Settings` section and copy and paste the MX Record value from Spread to Host and Value.
 
 ![relate-namecheap](https://mintlify.s3.us-west-1.amazonaws.com/relatekr/images/features/relate-namecheap.png)
 
-#### SPF, DKIM, DMARC Record 추가하는 방법
+#### How to add SPF, DKIM, and DMARC Record
 
-`Host Records` 섹션에서 새 레코드 추가를 클릭하여 스프레드에서 제공하는 TXT 및 CNAME Record 값을 추가합니다.
+Click `Add new record` in the `Host Records` section and copy and paste the TXT and CNAME Record values from Spread to Host and Value.
 
 ![namecheap-relate](https://mintlify.s3.us-west-1.amazonaws.com/relatekr/images/features/namecheap-relate.png)
 
 </Accordion>
 
-### Step 3. 도메인 레코드 설정 인증하기
+### Step 3. Verify your domain
 
-레코드 설정을 완료했다면, 스프레드 도메인 설정 페이지 하단에서 `레코드 인증` 버튼을 눌러 설정이 잘 됐는지 확인해야 합니다. 레코드 설정 확인은 최대 1시간까지 소요될 수 있습니다.
+Once you have finished adding the records, click the `Record Verification` button at the bottom of the Spread domain settings page to check if the settings are correct. The record verification can take up to 1 hour.
 
-설정 확인이 완료되면 각 레코드 섹션 옆에 녹색으로 `인증됨`이 표시됩니다.
+Once the verification is complete, you will see a green `Verified` in the record section.
 
-### Step 4. SPF and DMARC '부분인증됨' 이슈 해결하기
+### Step 4. Resolve SPF and DMARC 'Partially Verified' issue
 
 ![campaign-record](https://mintlify.s3.us-west-1.amazonaws.com/relatekr/images/features/campaign-record-partially.png)
 
-위 Step을 따라서 레코드 설정을 진행했음에도 불구하고 SPF and DMARC records가 `부분인증됨`으로 표시되는 경우가 있습니다. 이 경우 레코드 설정이 완료되지 않은 것이므로 아래와 같은 절차로 레코드 설정 확인 부탁드립니다.
+Even though you have followed the above steps, you may see that SPF and DMARC records are `Partially Verified`. In this case, the records are not completed. Please check the records by following the steps below.
 
-먼저, [DNS CHECKER](https://dnschecker.org/all-dns-records-of-domain.php?query=_dmarc.relate.so&rtype=TXT&dns=google) 사이트에서 **_dmarc.도메인** (e.g. _dmarc.spread.so)을 넣어 TXT type으로 확인합니다.
+First, check the records by going to [DNS CHECKER](https://dnschecker.org/all-dns-records-of-domain.php?query=_dmarc.relate.so&rtype=TXT&dns=google) and put **_dmarc.도메인** (e.g. _dmarc.spread.so) in TXT type.
 
-이곳에서 제공하는 가이드 코드를 그대로 복사해서 스프레드에 잘 넣었는지 확인 후, 가이드 코드와 다른 부분이 있다면 수정합니다. 예를 들어, p=none; 이지만 세미콜론(;)을 넣지 않아 오류가 난 케이스도 있습니다.
+Here, check if the guide code is copied correctly to Spread. If there is a different part, modify it. For example, if p=none; is provided but the semicolon (;) is not included, there is an error.
 
-만약 이러한 방법으로 해결되지 않는다면, we@relate.so 혹은 앱 우측 하단의 문의하기 버튼을 통해 문의 부탁드립니다.
+#### If you have custom DMARC policy
+
+If you have a custom DMARC policy, this might be the reason you're seeing `Partially Verified`. In this case, consider modifying the DMARC policy or reach out to us and we can resolve this for you.
+
+If this method does not work, please contact us through we@spread.so or the contact button at the bottom right of the app.
