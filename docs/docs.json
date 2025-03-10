@@ -60,6 +60,10 @@
       {
         "label": "Chat with us",
         "href": "mailto:we@spread.so"
+      },
+      {
+        "label": "한국어(Korean)",
+        "href": "https://docs.spread.so"
       }
     ]
   }
