@@ -34,7 +34,13 @@
         "pages": [
           "quickstart",
           "domain",
-          "import",
+          {
+            "group": "Import contacts",
+            "pages": [
+              "import",
+              "import/ai-import"
+            ]
+          },
           "send-email",
           "metrics",
           "manage-lists",
