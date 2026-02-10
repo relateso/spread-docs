@@ -28,16 +28,16 @@ This section helps you understand the full automation flow from lead intake to f
 > ## Scenario: Receiving an inbound inquiry
 > A team operating Product A is receiving inbound inquiries through a website contact form.
 > Based on the interest level and responses of the inquiring customers, they want to automatically continue follow-up emails and sales actions.
-
+<br/>
 ### Step 1. Inbound inquiries are automatically collected
 
 When a customer submits the Product A inquiry form, the lead is automatically added to the `Product A Inbound List`.
 This list functions as Emma’s source list.
 
-<div style={{ height: "6px" }} />
+<br/>
 ### Step 2. Product A onboarding content is automatically sent 
 
-When a lead is added to the `Product A Inbound List`, a [Triggered Campaign](emma-features#emma-campaign) that sends Product A onboarding content starts immediately.
+When a lead is added to the `Product A Inbound List`, a <span style={{ background: "#E9F8EE", padding: "1px 4px", borderRadius: "4px" }}>triggered campaign</span> that sends Product A onboarding content starts immediately.
 
 Onboarding content is a set of triggered campaigns designed to deliver product context and usage value to leads who are encountering Product A for the first time.
 
@@ -46,13 +46,13 @@ Onboarding content is a set of triggered campaigns designed to deliver product c
 	- Product A guide document (sent after 1 day): Explains Product A’s core features and basic usage flow.
 	- Product A use cases (sent after 2 days): Shows how Product A is used in real situations through actual customer examples.
 
-<div style={{ height: "6px" }} />
+<br/>
 ### STEP 3. Leads move to destination lists based on email response conditions
 When onboarding content is sent starting from the A Product inbound list,
-Emma automatically routes leads into different next flows based on predefined target lists and conditions.
+Emma automatically routes leads into different next flows based on predefined destination lists and conditions.
 
 Leads that meet the configured triggers and conditions (such as email opens or clicks) 
-are automatically moved to their corresponding target lists.
+are automatically moved to their corresponding destination lists.
 
 #### Destination list example (1): `High-interest Product A SQL List`
 A destination list designed to collect leads that show strong interest in Product A.  
@@ -75,19 +75,20 @@ Leads that meet these conditions are automatically added to this list.
 
 Leads that meet this condition are automatically added to this list and are excluded from all subsequent automated email flows.
 
-<div style={{ height: "6px" }} />
+
+<br/>
 ### STEP 4. The next flow starts based on leads added to each destination list
 
 Each destination list is used as the **source list for the next automation flow**.
 
 #### (1) `Product A MQL List Requiring Additional Explanation` → Nurturing content
 
-Leads added to this list are connected to an automated nurturing content flow designed to increase interest and understanding of Product A. At this stage, [Campaigns](emma-features#emma-campaign) that include newsletters are sent at regular intervals.
+Leads added to this list are connected to an automated nurturing content flow designed to increase interest and understanding of Product A. At this stage, <span style={{ background: "#E9F8EE", padding: "1px 4px", borderRadius: "4px" }}>one-off campaigns</span> that include newsletters are sent at regular intervals.
 
 
 #### (2) `High-interest Product A SQL List` → SQL conversion
 
-Leads added to this list are automatically connected to **sales follow-up emails** as a [Sequence](emma-features#emma-sequence).
+Leads added to this list are automatically connected to **sales follow-up emails** as a <span style={{ background: "#E9F8EE", padding: "1px 4px", borderRadius: "4px" }}>sequence</span>.
 
 [Example: Product A sales follow-up sequence]
 - Day 0: Send Product A meeting proposal email

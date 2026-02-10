@@ -1,0 +1,121 @@
+---
+title: "Choose an Email Sending Method"
+description: "Choose the right email sending method in Spread based on your goal."
+sidebarTitle: "Choose an Email Sending Method"
+"og:title": "Choose an Email Sending Method | Spread Product Guide"
+"og:description": "Choose the right email sending method in Spread based on your goal."
+"og:image": "https://relateso.sirv.com/spread/spread-docs.png"
+"twitter:title": "Choose an Email Sending Method | Spread Product Guide"
+"twitter:description": "Choose the right email sending method in Spread based on your goal."
+"twitter:image": "https://relateso.sirv.com/spread/spread-docs.png"
+---
+## Overview
+
+In Spread, there are three email sending methods depending on the purpose and use case:
+**One-off Campaigns, Triggered Campaigns, and Sequences**.
+This page explains which situations each sending method is best suited for.
+
+The table below compares the email sending methods provided by Spread.  
+If you are unsure which type of email to send, first check the method that matches your purpose.
+  
+<table
+  style={{
+    textAlign: "center",
+    width: "auto",
+    margin: "0 auto",
+    tableLayout: "fixed",
+    borderCollapse: "collapse",
+  }}
+>
+  <colgroup>
+    <col style={{ width: "16%", borderRight: "1px solid #E5E7EB" }} />
+    <col style={{ width: "28%" }} />
+    <col style={{ width: "28%" }} />
+    <col style={{ width: "28%" }} />
+  </colgroup>
+  <thead>
+    <tr style={{ backgroundColor: "#F2F4F7" }}>
+      <th
+        style={{
+          verticalAlign: "middle",
+          padding: "12px 8px",
+          borderRight: "1px solid #E5E7EB",
+        }}
+      >
+        Category
+      </th>
+      <th style={{ verticalAlign: "middle", padding: "12px 8px" }}><strong>One-off Campaigns</strong></th>
+      <th style={{ verticalAlign: "middle", padding: "12px 8px" }}><strong>Triggered Campaigns</strong></th>
+      <th style={{ verticalAlign: "middle", padding: "12px 8px" }}><strong>Sequences</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ borderRight: "1px solid #E5E7EB" }}>Recipients</td>
+      <td>Multiple leads</td>
+      <td>Leads added to a list</td>
+      <td>Individual leads</td>
+    </tr>
+    <tr>
+      <td style={{ borderRight: "1px solid #E5E7EB" }}>Sending method</td>
+      <td>Sent once in a single batch</td>
+      <td>Sent automatically when conditions are met</td>
+      <td>Sent sequentially at set intervals</td>
+    </tr>
+    <tr>
+      <td style={{ borderRight: "1px solid #E5E7EB" }}>Purpose</td>
+      <td>One-time marketing announcements</td>
+      <td>Automated guidance for inbound responses</td>
+      <td>Personal follow-up for sales</td>
+    </tr>
+    <tr>
+      <td style={{ borderRight: "1px solid #E5E7EB" }}>Typical examples</td>
+      <td>Newsletters, event announcements</td>
+      <td>Form response emails, sending introductory materials</td>
+      <td>Cold emails, meeting proposals</td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+## One-off Campaigns
+An one-off campaign sends **the same email to multiple leads in a list, once, at the same time**.  
+- Sends an HTML-based marketing email to 50 or more recipients in a single send.
+- The email is sent only once and is not used to create additional sends or multi-step flows. However, for campaigns that have already been sent, automation conditions can be configured later based on lead open and click responses.
+- Commonly used when **the same message needs to be delivered to many leads as a one-time send**, such as newsletters, product updates, event announcements, or nurturing content.
+
+<br/>
+## Triggered Campaigns
+A triggered campaign is a campaign in which a pre-written email is **sent automatically** when **a lead that meets specific conditions is generated**.
+
+- Each time a new lead is added to a list, an email is sent individually to that lead.
+- Emails can be sent immediately or configured to be sent after a set delay.  
+- Commonly used as **automated emails for inbound responses**.  
+    - (e.g.) Sending an information email to someone who submitted a form  
+    - (e.g.) Sending introductory materials to someone who requested them  
+    - (e.g.) Sending an onboarding email immediately after signup
+
+<div style={{ height: "12px" }} />
+<Tip> 
+  **One-off Campaigns vs Triggered Campaigns**   
+
+  An one-off campaign requires connecting a list and then manually clicking Send or setting a scheduled send time.
+  In other words, the send timing is determined by the user.
+
+  A triggered campaign, on the other hand, is activated after connecting a list and enabling it.
+  From that point on, emails are automatically sent based on the configured conditions and timing whenever a lead is added to the list.
+
+  If you only need to send an email once, an one-off campaign is appropriate.
+  If you want to design the flow after lead entry as well, a triggered campaign is a better fit.
+</Tip>
+
+<br/>
+
+## Sequences
+
+A sequence is a follow-up email flow that continues over multiple steps to maintain a conversation with an individual lead.
+
+- Emails are sent sequentially at configured intervals, and automated sending stops immediately when a reply is received, allowing the owner to continue follow-up communication manually.
+- Sequences are suitable for the stage where an actual conversation begins, after a Campaign or Triggered Campaign.
+- Commonly used when **direct follow-up communication** is required for leads with confirmed interest.
+    - (e.g.) Cold emails, sales meeting proposals, response-driving emails, or cases where multiple follow-ups are needed for a single person

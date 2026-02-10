@@ -20,7 +20,7 @@ By collecting the right information through forms, you can ultimately identify p
 
 <br/>
 ## Creating and managing forms
-From the left sidebar of the Spread app, select `Forms`, then click the `+ New Form` button at the top to create a form.
+From the left sidebar of the Spread app, select `Forms`, then click the `+ New form` button at the top to create a form.
 <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
   <img
     src="/images/forms/newform_en.png"
@@ -29,12 +29,12 @@ From the left sidebar of the Spread app, select `Forms`, then click the `+ New F
   />
 </div>
 
-Once a form is created, you can configure everything—from form structure to response management, routing, and automation—on a single screen through the four tabs at the top.
+Once a form is created, you can configure everything (from form structure to response management, routing, and automation) on a single screen through the four tabs at the top.
 
 ### 1. Editing a form
 
-After a form is created, click the form and configure it as needed in the `Edit Form` tab at the top.  
-First, click the `+ Add Block` button in the top-right corner to create blocks based on your purpose.
+After a form is created, click the form and customize it as needed in the `Builder` tab at the top. 
+First, click the `+ Add block` button in the top-right corner to create blocks based on your purpose.
 - Block types available in forms
     - Title, subtitle, text
     - Basic data fields for contacts and organizations
@@ -42,7 +42,7 @@ First, click the `+ Add Block` button in the top-right corner to create blocks b
 <Note> 
   Forms can use not only basic contact and organization data fields, but also custom fields.  
   
-  Custom fields can be created in advance on the `Custom Fields` page under `Workspace Settings`, or you can use fields that are automatically created through [Import](/ai-import).
+  Custom fields can be created in advance on the `Custom Fields` page under `Workspace Settings`, or you can use fields that are automatically created through [Import](import/ai-import).
     <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
       <img
         src="/images/forms/makecf.png"
@@ -51,12 +51,12 @@ First, click the `+ Add Block` button in the top-right corner to create blocks b
       />
     </div>
   You can set the response format for each question using the Data type of the added custom field.  
-  - Text / Multi-line text: Free-text responses  
-  - Select: Multiple-choice selection  
-  - Number: Numeric input
-  - Date / Datetime: Date or date-time input
-  -	URL: Link input
-  -	User / Contact: User or contact selection
+  - `Text / Multi-line text`: Free-text responses  
+  - `Select`: Multiple-choice selection  
+  - `Number`: Numeric input
+  - `Date / Datetime`: Date or date-time input
+  -	`URL`: Link input
+  -	`User / Contact`: User or contact selection
     
 </Note>
 
@@ -117,7 +117,7 @@ You can select one or multiple leads by clicking the checkboxes. Selected leads 
 
 
 ### 3. Routing settings
-In the `Routing Settings` tab at the top, you can configure which page is shown after a lead submits a form. 
+In the `Routing` tab at the top, you can configure which page is shown after a lead submits a form. 
 Depending on your settings, leads can be redirected to a calendar, document, or a specific page URL to continue the next action.
 <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
   <img
@@ -128,12 +128,12 @@ Depending on your settings, leads can be redirected to a calendar, document, or 
 </div>
 #### Adding routing
 
-When you click the `+ Add Routing` button on the right,
+When you click the `+ Add routing` button on the right,
 you can set conditional post-submission destinations based on lead responses as shown below.
 
 - **Field**
     - Select the form response field (block) used as the routing condition.
-	- (e.g.) Company name, email, multiple-choice question, custom question
+	- (e.g.) Organization name, email, multiple-choice question, custom question
 - **Operator**
 	- Set how the selected field should be compared.
 	- Conditions such as contains, does not contain, is, is not, is empty, is not empty can be used.
@@ -153,8 +153,8 @@ allowing them to naturally continue to the next action such as viewing documents
 <Note> If routing is not configured, users are redirected to the default "Thank you" page.</Note>
 
 <a id="forms-162"></a>
-### 4. Automation
-In the `Automation` tab at the top, you can automatically add leads who meet specific conditions among form respondents to lists.
+### 4. Automations
+In the `Automations` tab at the top, you can automatically add leads who meet specific conditions among form respondents to lists.
 This allows you to automate follow-up actions after form submission.
 <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
   <img
@@ -163,7 +163,7 @@ This allows you to automate follow-up actions after form submission.
     style={{ width: "70%", maxWidth: "640px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
   />
 </div>
-Click the `+ Add Target List` button to set conditions based on form response data.
+Click the `+ Add destination list` button to set conditions based on form response data.
 <div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
   <img
     src="/images/forms/adddes.png"
@@ -178,16 +178,14 @@ Click the `+ Add Target List` button to set conditions based on form response da
     - (e.g.) If no conditions are set, all form respondents are included
 
 - Leads that meet the conditions are automatically added to the selected list.
-- This target list can be used later as the start list for automated campaigns or sequences.
+- This destination list can be used later as the source list for triggered campaigns or sequences.
 
-In other words, you can automatically build a flow of  
-**Form submission → Condition filtering → Add to target list → Run automated campaign/sequence**,  
-allowing you to select only engaged leads and automate follow-up communication.
+In other words, you can automatically build a flow of **Form submission → Condition filtering → Add to destination list → Run triggered campaign/sequence**,  allowing you to select only engaged leads and automate follow-up communication.
 
 
 If you want to learn more about form automation and list-based email sending,
 please refer to the guide below.  
-👉 [View the Spread | Emma Automation Guide](emma-features)
+👉 [View the Spread | Emma Automation Guide](emma-settings)
 
 <br/>
 After creating a form, you can share the generated link on your website, in emails, or on social media to collect leads.

@@ -1,100 +1,352 @@
 ---
-title: "Send an email campaign"
-description: "Learn how to send your first email campaign with Spread"
-sidebarTitle: "Send an email campaign"
-"og:title": "Send an email campaign | Spread Product Guide"
-"og:description": "Learn how to send your first email campaign with Spread"
+title: "Send an Email"
+description: "Learn how to send your email with Spread"
+sidebarTitle: "Send an Email"
+"og:title": "Send an Email | Spread Product Guide"
+"og:description": "Learn how to send your email with Spread"
 "og:image": "https://relateso.sirv.com/spread/spread-docs.png"
-"twitter:title": "Send an email campaign | Spread Product Guide"
-"twitter:description": "Learn how to send your first email campaign with Spread"
+"twitter:title": "Send an Email | Spread Product Guide"
+"twitter:description": "Learn how to send your email with Spread"
 "twitter:image": "https://relateso.sirv.com/spread/spread-docs.png"
 ---
 
 ## Overview
+This page explains how to send emails using the three email sending methods provided by Spread.
+Before sending emails, make sure to review the [email sending method](/spread-email-types) that matches your purpose.
 
-Learn how to send your first email campaign with Spread.
 
-## Before sending
+## What to check before sending
 
-Before sending an email campaign with Spread, read below to understand how Spread works and ensures email deliverability.
+Before sending emails through Spread, review the following points carefully.
 
-1. Spread is a platform for sending emails to bulk audiences such as customers, users, and subscribers.
-2. Spread uses minimal styling and mainly plain text emails by default to ensure email deliverability. You can use HTML and CSS to style your emails, but please be aware that it may affect email deliverability.
-3. Do not send cold emails using Spread. Sending bulk emails to people who have not agreed to receive emails is prohibited by law, and it may damage your domain reputation so that you cannot send emails normally.
-4. If you have a large number of recipients (e.g. thousands or even tens of thousands), we suggest you to warm up your domain and clean up your list before sending emails. Please refer to the [Manage lists](/manage-lists) page for more information.
+- Emails are only meaningful if they reach the recipient’s inbox. **Spread is designed with delivery reliability as the top priority**, and therefore uses a low HTML/CSS-based email format.  
+- **Do not send cold emails to recipients who have not given consent.** Sending bulk cold emails may lead to legal issues and can damage your domain reputation, making future email delivery difficult.
+- Large lists that have not been emailed for a long time require prior management. If you are sending emails to thousands or tens of thousands of subscribers after a long period, **list warm-up and list cleaning** are strongly recommended.
+For more details, refer to [Managing lists safely](/manage-lists).
+- **Avoid unnecessary styling.** Spread applies minimal styling to reduce the likelihood of emails being classified as spam or promotions by major email services such as Gmail and Naver Mail.
+- **Be cautious when using keywords sensitive to spam filters.** Words such as “free,” “discount,” “special,” and “offer” should only be used when necessary and minimized in general emails.
+---
+<div style={{ background: "transparent", border: "1px solid #E6E8EB", borderRadius: "10px", padding: "14px 16px", width: "50%" }}>
+  <div style={{ fontSize: "1.25rem", fontWeight: 700, marginBottom: "6px", lineHeight: "1.2" }}>Quick navigation</div>
+  <div>
+    - [How to send an One-off Campaign](#how-to-send-an-one-off-campaign)  
+    - [How to send a Triggered Campaign](#how-to-send-a-triggered-campaign)  
+    - [How to send a Sequence](#how-to-send-sequences)
+  </div>
+</div>
 
-<Accordion title="What if I want to send cold emails?">
 
-Don't send cold emails using Spread. Instead, Spread can perfectly sync with Relate CRM, which provides the ability to send cold emails through its [Engage](https://www.relate.so/engage) feature.
+<br/>
+## How to send an One-off Campaign
+### Step 1. Create a new campaign  
+<div style={{ marginBottom: "0" }}>
+  From the left sidebar of the Spread app, click `One-off Campaigns`, then click the `+ New campaign` button at the top to create a new campaign.
+</div>
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/email/makecampaign_en.png"
+    alt="Make campaign"
+    style={{ width: "70%", maxWidth: "720px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 
-Check out the [Relate CRM](/crm) to learn more.
+
+### Step 2. Write the campaign  
+Click the `Compose` tab at the top of the created campaign to write the one-off campaign.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/campaign_en.png"
+    alt="Campaign"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+When writing a campaign, fill in the following fields.
+
+- **Sender**  
+	- `From`: Set the sender email address used to send the campaign.  
+	- `Name`: Enter the sender name displayed to recipients.  
+	- `Reply to`: Set the email address that will receive replies.  
+- **Recipients**  
+	- `List`: Select the list that contains the leads who will receive the email.  
+    - If no list exists yet, you must create a list before sending a campaign.
+
+- **Send at**  
+	- `Now`: Send the campaign immediately.  
+	- `Later`: Send the campaign at the specified date and time.  
+- **Subject**  
+	- Enter the email subject displayed to recipients.  
+- **Preview text**  
+    - A short line displayed after the subject in the recipient’s inbox.  
+    You can summarize the email or highlight key topics or benefits.
+    - If left empty, part of the email body will be displayed instead.
+
+<div style={{ height: "10px" }} />
+#### Writing the email body
+Spread provides an **editor** that allows you to write emails similarly to writing in Notion.   
+- You can apply various text styles using the toolbar at the top of the editor, such as headings, bullet lists, and numbered lists.
+- You can also type `/` in the editor to access text styling, button, and image options.
+- Images can be added, resized, and repositioned.
+- You can add Call-to-Action (CTA) elements using the `Button` feature.  
+  - If buttons or links are included, you can review email opens and link clicks after sending in [Email Metrics](/metrics).
+
+You can also use the **Campaign Assistant** on the right to get AI assistance when writing or improving the subject or body.
+
+<Accordion title="If you want to personalize emails with recipient information">
+  By using **Variables** (mail merge variables), you can insert recipient or company information into emails for personalization.
+  Even when sending the same content, recipient names, company names, and job titles are automatically applied to deliver more natural and tailored messages.
+
+  Variables can be used anywhere in the email subject and body,
+  and are automatically replaced based on each lead’s information at send time.
+
+
+  Below is a list of the main Variables provided by Spread.  
+  - `{{full_name}}`: Recipient’s full name  
+  - `{{first_name}}`: Recipient’s first name  
+  - `{{last_name}}`: Recipient’s last name  
+  - `{{title}}`: Recipient’s job title  
+  - `{{email}}`: Recipient’s email address  
+  - `{{phone}}`: Recipient’s phone number  
+  - `{{organization}}`: Company name  
+  - `{{domain}}`: Company website URL  
+  - `{{number_of_contacts}}`: Number of contacts registered for the company  
+  - `{{sender_name}}`: Sender’s name  
+  - `{{sender_email}}`: Sender’s email address  
+
+  When used properly,
+  variables allow bulk emails to be delivered **as naturally as 1:1 emails**.
 </Accordion>
 
-## Basics
 
-### 1. Write an email
+<div style={{ height: "10px" }} />
+#### Email footer settings
+Spread recommends including a footer in all emails. Footer content can be configured per campaign, and the default footer includes the following.
 
-Go to the campaign page by clicking **Email campaign** in the left menu. Then, click `+ Campaign` to create a new campaign.
-
-![create-campaign](/images/send-email.png)
-
-When writing an email campaign, please fill in the following information.
-
-- Subject: Email subject
-- Preview: (Optional) Preview text is a one-line description that appears after the subject in the customer's inbox. You can write a summary of the email content or highlight the key topic or benefit.
-
-#### Write email body
-
-Spread has an editor that allows you to write emails like you would in Notion. If you are familiar with markdown, you can use it to style your email.
-
-You can also use the toolbar at the top of the editor to apply various styles to the text, add images/resize/position them. Even if you don't select the toolbar, you can see the text styling, button, and image addition menu by entering `/` in the editor.
-
-Finally, add a Call-to-action (CTA) element by using the button. If the button or a separate hyperlink and link is included, you can check the email open and link-based click status after sending in [Metrics](/metrics).
-
-#### Email Footer content settings
-
-Spread recommends sending emails with a footer. Footer content can be set and customized for each campaign, and the default content is as follows.
-
-- Help text on why the recipient is receiving this email
+- The reason the recipient is receiving the email
 - Company name
 - Company address
-- A link that allows the recipient to unsubscribe directly
+- An unsubscribe button that allows recipients to opt out directly
 
-Example:
-
+Refer to the example below.
 ```
-This email was sent to you because you subscribed to our newsletter.
-Spread, 548 Market St, 42341 San Francisco, CA 94104
+You received this email because you agreed to receive emails from Spread.
+Spread & Relate | 548 Market St. 42341 San Francisco, CA 94104 | we@relate.so
 [[Unsubscribe]]
 ```
 
-Spread allows you to enter your company name and address freely. In general, follow the order above.
+As shown above, the **unsubscribe link** can be configured per campaign. Any text wrapped in double brackets, such as `[[enter text here]]`, is recognized as an unsubscribe link.
 
-#### Customize the unsubscribe link
+<Warning>
+Unsubscribe links are not available in test sends, but function normally in actual sends.
+</Warning>
 
-You can customize the unsubscribe link for each campaign. Any text can be used as an unsubscribe link by enclosing it in double square brackets like `[[text]]`.
 
+<div style={{ height: "2px" }} />
+#### Removing branding
+
+The `Powered by Spread` footer can only be removed on paid plans.  
+You can change your plan by clicking `Workspace settings` in the Spread app.  
+For more information, please contact us at we@spread.so.
+
+
+<div style={{ height: "20px" }} />
+### Step 3. Send the campaign
+- Click `Send` in the top-right corner to send the campaign based on the configured send time.
+
+- Click the adjacent `Test send` button to send a test email to the email address of a workspace member.
+Use this to review content and layout before sending the campaign to actual leads.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/testsend_en.png"
+    alt="Test send"
+    style={{ width: "60%", maxWidth: "680px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+<br/>
 <Info>
-The unsubscribe link is not available in test send, but it works fine in actual sending. If you have any questions, please contact us at we@spread.so.
+  In the `Automations` tab at the top of an one-off campaign, you can configure leads to be automatically added to a new destination list based on their email responses and status.
+  This allows you to connect the post-campaign lead flow naturally to the next step.
+  
+  For detailed automation usage, refer to the [Spread | Emma features](/emma-settings) guide.
 </Info>
+---
 
-### 2. Set sender information
+## How to send a Triggered Campaign
+### Step 1. Create a new triggered campaign  
+From the left sidebar of the Spread app, click `Triggered Campaigns`, then click the `+ New triggered campaign` button at the top to create a new triggered campaign.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/new_en.png"
+    alt="Create triggered campaign"
+    style={{ width: "70%", maxWidth: "720px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
 
-Sender information can be set for each email campaign.
 
-**Sender**
-- From: Enter the sender's email address.
-- Name: Enter the sender's name.
-- Reply-To: Enter the email address to receive replies from recipients. If it is the same as the sender's email address, leave it blank.
+### Step 2. Write the triggered campaign email
+Click the `Compose` tab at the top of the created triggered campaign to write the email.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/trig2_en2.png"
+    alt="Triggered campaign"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+When writing a triggered campaign, fill in the following fields.
 
-### 3. Select a list to send the email campaign
+- **Sender**  
+	- `From`: Set the sender email address used to send the email.  
+	- `Name`: Enter the sender name displayed to recipients.  
+	- `Reply to`: Set the email address that will receive replies.  
+- **Subject**  
+	- Enter the email subject displayed to recipients.  
+- **Preview text**  
+    - A short line displayed after the subject in the recipient’s inbox. 
+    You can summarize the email or highlight key topics or benefits.
+    - If left empty, part of the email body will be displayed instead.
 
-Select the list you want to send the email campaign to. If you don't have a list yet, you need to create one first in the [Lists](/manage-lists) page.
+<Note>
+    Unlike One-off Campaigns, Triggered Campaigns are sent based on the source list, so you do not set recipients or send time here. This is explained in Step 3.
+</Note>
+**Writing the email body, configuring the footer, and removing branding work the same as described in the One-off Campaign sending section above.**
 
-### 4. Schedule email campaigns
 
-You can schedule the email campaign to be sent at a specific time. Choose the date and time you want to send the email campaign and click `Schedule`.
+<div style={{ height: "6px" }} />
+### Step 3. Connect the source list
+A triggered campaign starts sending based on the moment a lead is added to the source lists.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/trig_start3_en.png"
+    alt="Triggered campaign start"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+Select the `Source lists` tab at the top, then click the `+ Connect a list` button to connect the list that will trigger this triggered campaign.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/trig_list_en.png"
+    alt="Triggered campaign list"
+    style={{
+      width: "70%",
+      boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)",
+      borderRadius: "8px",
+    }}
+  />
+</div>
+- **List**: Select the list that will be used as the starting point for starting automation.
+- **Filter** (*optional*): Configure the triggered campaign to run only for leads that match specific field values (name, email, etc.) within the list.  
+- **Delay** (**Send timing**): Send immediately after a lead is added, or send after a set delay (minutes, hours, or days).  
 
-### 5. Remove Spread branding
+When a lead is added to the connected source list, the lead will receive the triggered campaign automatically based on the configured conditions.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/trig_start_en.png"
+    alt="Triggered campaign start"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+You can connect **multiple source lists to a single triggered campaign.**  
+For example, you can start the same triggered campaign for leads coming in through different paths, such as a list for website signups and a list for leads who submitted a specific form.
 
-Remove `Powered by Spread` branding by upgrading to a paid plan.v You can upgrade [here](https://admin.spread.so/settings/billing).
+
+Using the `Allow duplicate sends` option at the bottom,
+you can configure whether to send the triggered campaign again when the same lead meets multiple source list conditions.
+If this option is disabled,
+each lead receives the same triggered campaign only once.
+
+<div style={{ height: "6px" }} />
+### Step 4. Publish the triggered campaign
+- Click `Activate` in the top-right corner.
+After activation, each time a lead is added to the source list, the triggered campaign will be sent automatically based on the configured timing.
+
+- Click `Stop` to pause the automation.
+
+- Using `Test send` works the same as the campaign test send described above.
+
+
+<div style={{ height: "6px" }} />
+### Step 5. Review the automation flow
+In the `Automations` tab at the top, you can review the flow of the triggered campaign visually.
+
+**With Spread | Emma, you can automatically connect the next sending flow based on email responses.**
+For example, if a lead’s link clicks exceed a certain threshold,
+the lead is automatically moved to a pre-configured destination list,
+and that destination list can then be connected as the starting point for another triggered campaign or sequence.
+
+For more details, refer to the [Spread | Emma features](/emma-settings).
+
+
+
+<br/>
+---
+## How to send Sequences
+### Step 1. Create a new sequence  
+From the left sidebar of the Spread app, select `Sequences`, then click the `+ New sequence` button at the top to create a new sequence.
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/makesq_en.png"
+    alt="Make sequence"
+    style={{ width: "70%", maxWidth: "720px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+
+### Step 2. Write each step in the sequence
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/addsq_en.png"
+    alt="Add sequence"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+In the `Steps` tab at the top of the created sequence, click the `+ Add step` button to write each step of the sequence.  
+
+<div style={{ display: "flex", justifyContent: "center", marginTop: "12px" }}>
+  <img
+    src="/images/email/addstage_en.png"
+    alt="Add stage"
+    style={{ width: "55%", maxWidth: "520px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+
+In the window above, configure the following items.  
+- **Sender account**: Select the connected email account that will actually send the sequence. This account determines the mailbox used for delivery and reply handling.
+
+- **Send email as**: Set the email address that will appear in the From field for this step. You can use an alias address (e.g. support@yourdomain.com) to control how the sender is displayed to recipients.
+
+- **Subject and body**: Write the email content to be sent for this step.
+The editor toolbar works the same as described in the One-off Campaigns writing section above.
+
+-	**Delay** (**Send timing**): Set the interval so the sequence is sent a certain number of minutes, hours, or days after the previous step.
+
+
+Sequences are sent in order based on the configured sequence and intervals.
+
+<Tip>
+  Starting from the second step of sequence, if you leave the email subject empty, the email is sent automatically as a **reply** to the previous email. In this case, the subject is set in the `Re:` format so the emails continue in a single thread.
+</Tip>
+
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img
+    src="/images/email/10min_en.png"
+    alt="Sequence"
+    style={{ boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+As shown in the screenshot above,
+- You can send the first email 10 minutes after a lead is added to the sequence,  
+- send the second follow-up email 1 day later, and  
+- send the final reminder email 3 days later.
+
+If a reply is received, sending for subsequent steps stops automatically.
+
+
+<div style={{ height: "8px" }} />
+### Step 3. Configure recipients
+In the `Recipients` tab at the top, click the `+ Add from contacts` button to add individual leads who will receive the sequence.
+
+
+<div style={{ height: "8px" }} />
+### Step 4. Review the automation flow
+In the `Automations` tab at the top, you can review the flow of the configured sequence visually.  
+The structure and review method are the same as described for Triggered Campaigns above.
