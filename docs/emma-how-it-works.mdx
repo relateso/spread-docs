@@ -1,0 +1,214 @@
+---
+title: "How It Works"
+description: "Learn how Emma in Spread converts leads into sales opportunities, step by step."
+sidebarTitle: "How It Works"
+---
+
+## Overview
+<img
+  src="/images/emma/allworkflow.png"
+  alt="EMMA workflow"
+  width="720"
+  style={{
+    display: "block",
+    margin: "12px auto 24px",
+    boxShadow: "0 10px 28px rgba(0, 0, 0, 0.18)",
+    borderRadius: "12px"
+  }}
+/>
+<Steps>
+  <Step title="Classify incoming leads"></Step>
+  <Step title="Connect email flows tailored to each lead segment">
+  </Step>
+  <Step title="Decide the next step based on lead email responses">
+  </Step>
+  <Step title="Lead recycling"></Step>
+</Steps>
+
+
+## STEP 1. Classify incoming leads
+
+- Regardless of the channel, all leads are collected in one place and organized into lists.
+- Lead acquisition channels  
+   <div style={{ height: "10px" }} /> 
+    <Accordion title="Forms">
+        Leads collected through forms can be automatically classified into lists based on their responses.  
+        (e.g.) Response: “Interested in Product A” → Automatically classified into the Product A interest list  
+
+        For detailed setup instructions, refer to the [Forms](/forms) guide.
+
+    </Accordion>
+
+    <Accordion title="Documents">
+        Leads can be collected through content-based actions such as downloading resources or viewing brochures.
+        PDF files can be converted into shareable links, and
+        through the [Pulse](/pulse) feature, you can track whether a lead opened a document and which content they engaged with.
+
+        For more details, refer to the [Documents](/docs) guide.
+    </Accordion>
+
+    <Accordion title="Import">
+        When you upload lead or customer data via CSV/Excel files, AI automatically extracts the data and creates lists.
+        This is useful when you want to quickly build an initial lead list without manual work.
+        
+        For detailed usage instructions, refer to the [Import data](/import/ai-import) guide.
+    </Accordion>
+
+    <Accordion title="Zapier">
+      Spread can be easily integrated with external services via Zapier without writing any code. 
+      You can build automated workflows with tools such as Slack, Google Sheets, Notion, and CRMs by using triggers like new lead creation, list updates, or email send events.
+
+      (e.g.) Google Sheets survey submission → Automatically added to a list in Spread  
+      (e.g.) When a new lead is added in Spread → Send a notification to a Slack channel
+    </Accordion>
+
+    <Accordion title="API">
+      If more granular control or complex integrations are required, you can use the Spread Public API to connect lead data, lists, and email sending activities stored in Spread with external services.
+
+      Through the API, you can control or automate key Spread features such as lead management automation, list synchronization, and email sending flows from external systems.
+
+      If you want to build custom workflows using the API, please contact the Relate team at we@relate.so.
+    </Accordion>
+
+<div style={{ height: "10px" }} />
+Leads are automatically classified into the following two states based on engagement level and responses, and subsequent email flows are determined according to each classification.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+  <div className="border border-gray-200 rounded-lg p-3">
+    &nbsp;&nbsp;✅ **SQL**<span style={{ fontSize: "0.875em", fontWeight: 700 }}> (Sales Qualified Lead)</span>  
+    <span style={{ display: "inline-block", paddingLeft: "24px" }}>: High-interest ICP</span>
+    - (e.g.) Imported data clearly meets ICP criteria such as industry or revenue size
+    - (e.g.) Explicitly expressed interest in a specific product via a form
+    - (e.g.) Clearly categorized acquisition source
+    - (e.g.) Repeatedly opened marketing emails
+    - (e.g.) Clicked internal links 3 or more times *(criteria can be adjusted based on team settings)*
+  </div>
+  <div className="border border-gray-200 rounded-lg p-3">
+    &nbsp;&nbsp;✅ **MQL**<span style={{ fontSize: "0.875em", fontWeight: 700 }}> (Marketing Qualified Lead)</span>     
+    <span style={{ display: "inline-block", paddingLeft: "24px" }}>: Lead requiring interest validation</span>
+    - (e.g.) Opened marketing emails but did not click or reply
+    - (e.g.) Viewed only part of the content
+    - (e.g.) Participated in a webinar / event but with low engagement
+    - (e.g.) Responded intermittently to campaign emails
+  </div>
+</div>
+
+
+<br />
+## STEP 2. Connect email flows tailored to each lead segment
+
+Email flows are automatically initiated based on each lead’s classification.
+
+<img
+  src="/images/emma/step2_en.png"
+  alt="EMMA flow detail"
+  width="720"
+  style={{
+    display: "block",
+    margin: "12px auto 24px",
+    boxShadow: "0 10px 28px rgba(0, 0, 0, 0.18)",
+    borderRadius: "12px"
+  }}
+/>
+
+### ✅ SQL leads: A flow that directly leads to meetings
+
+Leads classified as SQL already have sufficient confirmed interest and fit.  
+For these leads, a **sales-focused follow-up** [**Sequences**](emma-settings#emma-sequence) flow is immediately connected.  
+<div style={{ marginTop: "-12px" }}>
+  - **Meeting proposal message**
+- **Follow-up reminder emails**
+  - Sent step by step until a meeting is scheduled
+  - The sending timing of each step can be freely adjusted in the settings
+</div>
+
+At the same time, **onboarding content** (triggered campaigns) is also delivered so that the lead can understand the context before the meeting.  
+As a result, a flow is created that naturally leads to meetings before interest fades.  
+
+  
+  
+### ✅ MQL leads: A flow to validate and nurture interest
+
+Leads classified as MQL are not yet ready for an immediate meeting proposal.  
+For these leads, a **marketing email** flow is connected to validate and nurture interest.
+
+<div>
+  First, an [**triggered campaign**](emma-settings#emma-campaign) that includes **onboarding content** is sent to continuously track lead responses. Lead status is re-evaluated based on predefined criteria.
+  <ul style={{ marginTop: "-2px", marginBottom: "-8px" }}>
+    <li style={{ marginBottom: "-6px" }}>When criteria are met: the lead is **converted to SQL**, and a **sales follow-up email** flow begins.</li>
+    <li>When criteria are not met: **nurturing** is continuously carried out through [one-off campaigns](emma-settings#emma-campaign) (such as newsletters).</li>
+  </ul>
+</div>
+
+For example, when the cumulative number of clicks reaches a predefined threshold, the lead is automatically converted to SQL. *(Thresholds can be adjusted based on user settings.)*  
+
+
+<Note>
+  In other words, Spread | Emma automatically selects the sending method based on lead status.
+
+  - Stage to validate responses → **Triggered campaigns** (onboarding content)  
+  - Leads that need interest nurturing → **One-off Campaigns** (nurturing content, newsletters, etc.)
+  - Leads ready for meeting-level conversations → **Sequences** (sales follow-up)
+</Note>
+
+
+<div style={{ height: "10px" }} />
+At this stage, there is no need to write emails from scratch.  
+Emma’s **AI Writer** creates email drafts aimed at meeting conversion based on the lead’s activity and context.
+These emails are not simple templates, but are written using **AI descriptions** that incorporate basic information about your company and the lead.
+
+
+<br />
+## STEP 3. Decide the next step based on lead email responses
+
+Spread | Emma does not treat email responses as simple performance metrics. The responses themselves become the criteria for determining the next action.
+
+### (1) Email responses are automatically collected and organized at the lead level  
+Emma automatically records all responses to one-off campaign, triggered campaign, and sequence emails. These responses are aggregated and organized per lead, not per individual email.
+
+### (2) Collected responses become decision signals  
+<div style={{ marginTop: "-16px" }}>
+  - **One-off Campaign / Triggered campaign responses**: Email opens, link clicks, unsubscribes
+  - **Sequence responses**: Replies
+</div>
+
+These responses become the core data used to determine how much interest a lead has.
+
+### (3) Post-email behavior is also taken into account  
+Email opens, clicks, and replies alone are not always sufficient to fully understand lead interest.  
+Emma tracks post-email behavior through [**Pulse**](/pulse).
+
+<Tip>
+  **Pulse**
+  - You can check who opened a document, how far they read, and which content they stayed on using Pulse.
+  - This information is used as a stronger signal to identify what each lead is genuinely interested in.
+</Tip>
+
+<div style={{ height: "6px" }} />
+
+### (4) New lists are created based on response results
+In Emma, there are [**Destination lists**](/emma-features#spread-|-emma-자동화의-기본-세트) that automatically move only leads that meet specific conditions based on collected email responses.  
+
+For example, destination lists can be created based on the following criteria:  
+  - Leads with repeated clicks in the most recent triggered campaign
+  - Leads that directly replied to sequences
+  - Leads that clicked a specific content link more than a certain number of times
+  - Leads with confirmed meeting schedules
+  - Leads that completed specific actions via API integration (e.g., sign-up)
+  - Leads with little to no email or content engagement
+
+
+
+### (5) These lists become the starting point for the next flow
+  - Immediately lead to meeting proposals, or
+  - Become the starting point for the next email sending flow, or
+  - **Lead into nurturing flows for lead recycling**
+
+
+
+<br />
+## STEP 4.  Lead recycling
+
+Lead lists segmented by responses are not the end of automation, but **a new starting point that determines the next flow**.  
+Emma does not discard leads or stop automation simply because there was no response once.
+All leads are continuously re-evaluated based on responses and managed so they can move to the next stage at the appropriate time.

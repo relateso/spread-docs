@@ -1,0 +1,113 @@
+---
+title: "Documents"
+description: "From document sharing to view tracking, you can quickly understand lead interest at a glance."
+sidebarTitle: "Documents"
+---
+
+## Overview
+With Spread Documents, you can easily share documents as links and quickly track whether leads have viewed them.
+
+
+<br/>
+## Document feature guide [Step-by-Step]
+
+### Step 1. Create a document
+From the left sidebar of the Spread app, go to the `Documents` page and click the `+ New Document` button at the top to create a document.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/docs/newdocs_en.png"
+    alt="Make docs"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+Upload the PDF file of the document you want to share with leads (e.g., sales materials, proposals, contracts).
+
+
+
+<div style={{ height: "10px" }} />
+### Step 2. Generate a document sharing link
+
+When a document is created, a default sharing link (**Default link**) is automatically generated.
+This default link can be shared with customers immediately without any additional configuration.  
+
+If additional conditions are required, click the `+ New Link` button to create a new document sharing link.  
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/docs/createlink_en.png"
+    alt="Make link"
+    style={{ width: "70%", maxWidth: "640px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+For newly created links, you can configure the following options to control how the document is shared.
+- `Require email to view` 
+  - Requires the viewer to enter an email address before accessing the document.
+  - Leads who enter their email are tracked as view events in [Pulse](/pulse).
+- `Allow download`: Configure whether the PDF file can be downloaded.
+- `Require password`: Requires a password to access the document for enhanced security.
+- `Expiration date`: Restricts access to the link after the specified date.
+
+You can also create multiple sharing links for a single PDF document,
+which is useful when you need separate view tracking by recipient or group. 
+<Tip>
+To update a document, click the `+ Upload new version` button on the right
+to replace the existing document with a new file.
+
+Recipients will always view the latest version of the document through the same link.
+
+Each version is stored separately internally,
+allowing you to compare viewing metrics and lead responses before and after document updates by version.
+</Tip>
+
+
+<div style={{ height: "10px" }} />
+### Step 3. Track views and engagement
+When you share the generated link, recipients view the document through a PDF browser viewer.
+While recipients read or navigate the content, Spread Docs runs quietly in the background and tracks various engagement metrics.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/docs/docsfull_en.png"
+    alt="Docs overview"
+    style={{ width: "100%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>
+At the top of each document page, you can check the following three metrics.
+- **Total visits**: The total number of visits including duplicates, counting multiple views by the same person.
+- **Unique visits**: The number of visits excluding duplicates, counting only one visit per person even if they view multiple times.
+- **Average time spent**: The average amount of time viewers spent reading the document.
+
+
+To view metrics by generated link, click each link.
+
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/docs/linkvisit_en.png"
+    alt="Link pulse"
+    style={{ width: "80%", maxWidth: "100%", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div> 
+The following metrics are available.
+- Email accounts that accessed the link (when `Require email to view` is enabled)
+- Total time spent on the document
+- Time spent per page
+- First visit date
+- Access device
+
+
+
+By reviewing viewers’ email addresses and total time spent, you can use this information effectively for sales decision-making.
+Through Spread Documents, companies gain a clear advantage in understanding customer engagement and interest, while also easily controlling ownership and access to documents that contain important company information.
+
+
+<br/>
+---
+## Use with Spread [Forms](/forms)
+If you want to share a document immediately with customers who submit a form, you can use [Form routing settings]((/forms#3-라우팅-routing-설정)).
+
+In the block editor, set the Type to Documents as shown in the screenshot below and select the document. After form submission, the screen will automatically transition to display the document.
+<div style={{ display: "flex", justifyContent: "center", marginTop: "6px" }}>
+  <img
+    src="/images/docs/editrout.png"
+    alt="Form routing"
+    style={{ width: "70%", maxWidth: "640px", height: "auto", boxShadow: "0 12px 30px rgba(0, 0, 0, 0.18)", borderRadius: "8px" }}
+  />
+</div>

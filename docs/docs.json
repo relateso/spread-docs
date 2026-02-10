@@ -35,10 +35,31 @@
           "quickstart",
           "domain",
           "import/ai-import",
+          "send-methods",
           "send-email",
           "metrics",
+          "dashboard",
           "manage-lists",
           "crm"
+        ]
+      },
+      {
+        "group": "Spread | Emma",
+        "pages": [
+          "emma-intro",
+          "emma-how-it-works",
+          "emma-settings",
+          "emma-scenarios",
+          "emma-faq"
+        ]
+      },
+      {
+        "group": "Spread Add-ons to Boost Conversion",
+        "pages": [
+          "forms",
+          "documents",
+          "meetings",
+          "pulse"
         ]
       }
     ]
