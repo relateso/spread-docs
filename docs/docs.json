@@ -57,6 +57,7 @@
         "pages": [
           "forms",
           "docs",
+          "meetings",
           "pulse"
         ]
       }
