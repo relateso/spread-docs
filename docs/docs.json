@@ -36,14 +36,38 @@
         ]
       },
       {
-        "group": "Spread Guide",
+        "group": "Getting Started with Spread",
         "pages": [
           "quickstart",
-          "domain",
-          "import/ai-import",
+          "domain"
+        ]
+      },
+      {
+        "group": "Importing Contacts",
+        "pages": [
+          "google-contacts-sync",
+          "import/ai-import"
+        ]
+      },
+      {
+        "group": "Sending Emails",
+        "pages": [
+          "lists-and-recipients",
           "spread-email-types",
           "send-email",
+          "email-share-web-link"
+        ]
+      },
+      {
+        "group": "Analyzing Results",
+        "pages": [
           "metrics",
+          "dashboard"
+        ]
+      },
+      {
+        "group": "Managing Subscribers",
+        "pages": [
           "manage-lists",
           "crm"
         ]

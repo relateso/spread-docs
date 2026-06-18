@@ -1,40 +1,48 @@
 ---
 title: "Manage lists"
-description: "Learn how to manage your lists with Spread"
+description: "Learn how to manage your subscriber lists safely to protect deliverability and domain reputation."
 sidebarTitle: "Manage lists"
 "og:title": "Manage lists | Spread Product Guide"
-"og:description": "Learn how to manage your lists with Spread"
+"og:description": "Learn how to manage your subscriber lists safely to protect deliverability and domain reputation."
 "og:image": "https://relateso.sirv.com/spread/spread-docs.png"
 "twitter:title": "Manage lists | Spread Product Guide"
-"twitter:description": "Learn how to manage your lists with Spread"
+"twitter:description": "Learn how to manage your subscriber lists safely to protect deliverability and domain reputation."
 "twitter:image": "https://relateso.sirv.com/spread/spread-docs.png"
 ---
 
 ## Overview
 
-Learn how to manage your lists with Spread. If you have thousands or even tens of thousands of subscribers who haven't received emails in the past few months, you need to warm up your domain and clean up your list before sending emails. If you send emails to temporary/fake email addresses, you will experience soft/hard bounces. If too many bounces occur, your account may be restricted, blocked, or it may take a long time to restore your domain reputation.
+This page covers **how to manage your subscriber lists safely**. Here, "safely" means **protecting your email deliverability and domain reputation** by reducing bounces caused by invalid addresses.
 
+In particular, if you have a large list (thousands to tens of thousands) and haven't sent email for a while (several months or more), we recommend **warming up and cleaning your list** before a full send.
 
+<Warning>
+  Sending to temporary or fake email addresses causes soft/hard bounces. If bounces accumulate, future sends may be restricted, your account may be blocked, or your domain reputation may become difficult to recover. A damaged reputation can take a long time — or be practically impossible — to restore, so it's important to keep a clean list from the start.
+</Warning>
 
-## Important things to remember when importing/adding subscribers
+## What to follow when adding subscribers
 
-When adding email addresses (subscribers) to Spread, please follow the following:
+When adding email addresses (subscribers) to Spread, please follow these guidelines.
 
-1. Add only subscribers who have previously given email consent.
-2. Add protection devices like Recaptcha, Botpoison, etc. to the email consent form to block bots.
-3. (If possible) Use a double opt-in to get email consent from subscribers.
-4. Do not send emails to email addresses that have unsubscribed or have bounced.
+1. Add **only subscribers who have given prior email consent**.
+2. Add bot-protection (reCAPTCHA, Botpoison, etc.) to your consent form to block fake signups.
+3. (If possible) Confirm consent once more with a **double opt-in**.
+4. Do not re-send to addresses that have **unsubscribed or previously bounced**.
 
-### Spread automatically manages bounced contacts and subscription status.
+## Spread's automatic protections
 
-If you send all emails (transactional, marketing, product update emails) through Spread, Spread automatically manages bounced contacts and subscription status, so you don't need to manage them separately.
+Spread handles the following automatically so you can keep a clean list.
 
-If the bounce rate exceeds 5% of the number of emails sent, Spread automatically stops the campaign and sends an email to you to prevent further damage to your domain reputation.
+### Automatic bounce & subscription management
 
-### Spread flags bounced contacts automatically
+If you send all your emails (transactional, marketing, product updates) through Spread, **you don't need to manage bounces and unsubscribes separately.** Spread tracks each subscriber's status (bounced, unsubscribed) and only sends to deliverable recipients.
 
-Spread automatically checks all subscribers and detects email addresses that are likely to bounce. However, note that it is not 100% accurate, so it cannot prevent bounces 100%.
+In addition, if the **bounce rate exceeds 5% per 1,000 emails sent during a campaign, Spread automatically stops the campaign** and notifies you to prevent further damage.
+
+### Automatic detection of likely bounces
+
+Spread runs an automatic check on all registered subscribers to **detect email addresses that are likely to bounce** in advance. Note that this predicts likelihood and is not 100% accurate, so it cannot fully prevent bounces.
 
 ## Create a list
 
-A list is a list of subscribers you want to send an email campaign to. You can create a new list by clicking **Lists** in the left menu in the Spread app.
+A list is a **list of subscribers** you want to send an email campaign to. For how to create a list and set it as email recipients, see [Create a List and Set Recipients](/lists-and-recipients).

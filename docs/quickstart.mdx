@@ -33,14 +33,15 @@ Welcome to Spread! This onboarding guide will help you get started with Spread q
 - Manage and track email sending, opening, and clicking data
 - Manage and segment different customer/subscriber lists
 
-## 4 steps to get started
+## 5 steps to get started
 
 Follow the steps below to get started with Spread.
 
-1. [Add a custom domain](#1-add-a-custom-domain)
-2. [Import and add contacts](#2-import-and-add-contacts)
-3. [Create your first email](#3-create-your-first-email)
-4. [Manage and segment different customer/subscriber lists](#4-manage-and-segment-different-customer-subscriber-lists)  
+1. [Add a custom domain](/domain)
+2. [Import contacts](/google-contacts-sync)
+3. [Create a list and set recipients](/lists-and-recipients)
+4. [Compose and send your email](/send-email)
+5. [Analyze results and manage subscribers](/metrics)
 
 ## 1. Add a custom domain
 
@@ -60,58 +61,58 @@ To send emails using a custom domain, you need to add your domain and verify own
 If you don't have a custom domain, you can use the `@spreadsend.com` domain provided by Spread team.
 </Note>
 
-## 2. Import and add contacts
+## 2. Import contacts
 
-Learn how to import and add contacts. Spread provides the following basic methods for adding contacts:
+To send emails, you first need to add your subscribers (contacts) to Spread. Spread provides the following methods:
 
-- [Upload an Excel/CSV file](/import)
+- [Sync from Google Contacts](/google-contacts-sync)
+- [Upload an Excel/CSV file](/import/ai-import)
 - Manually add contacts
 - Connect via API
-- Connect via Zapier
 - Connect via Relate CRM
 
-<Card title="Import" icon="file-import" href="/import">
-  Learn how to import contacts.
-</Card>
-
-## 3. Create your first email
-
-Create your first email campaign.
-
 <CardGroup cols={2}>
-  <Card
-    title="Write an email"
-    icon="paper-plane-top"
-    href="send-email"
-  >
-    Learn how to write an email using the markdown editor.
+  <Card title="Google Contacts Sync" icon="address-book" href="/google-contacts-sync">
+    Learn how to automatically import contacts saved in Google Contacts.
   </Card>
-  <Card
-    title="Analyze email data"
-    icon="magnifying-glass-chart"
-    href="metrics"
-  >
-    Learn how to manage and track email metrics including deliveries, open rates, and clicks.
+  <Card title="Import" icon="file-import" href="/import/ai-import">
+    Learn how to import contacts by uploading an Excel/CSV file.
   </Card>
 </CardGroup>
 
-## 4. Manage and segment different customer/subscriber lists
+## 3. Create a list and set recipients
 
-Create and manage a safe subscriber list. Also, learn how to use Spread with Relate CRM.
+In Spread, you set email recipients **by 'list'**. Create a list from your contacts, then set that list as the recipient.
+
+<Card title="Create a List and Set Recipients" icon="users" href="/lists-and-recipients">
+  Learn how to create a recipient list and set it as your email recipients.
+</Card>
+
+## 4. Compose and send your email
+
+Create and send your first email campaign.
 
 <CardGroup cols={2}>
-  <Card
-    title="Manage subscriber lists"
-    icon="building-shield"
-    href="manage-lists"
-  >
-    Learn how to create and manage email lists.
+  <Card title="Choose an email sending method" icon="list-check" href="/spread-email-types">
+    Choose the sending method that fits your purpose — One-off Campaign, Triggered Campaign, or Sequence.
   </Card>
-  <Card
-    title="Use Spread with Relate CRM"
-    icon="handshake"
-    href="crm"
-  >
-    Learn how to use Spread with Relate CRM.
+  <Card title="Compose and send an email" icon="paper-plane-top" href="/send-email">
+    Learn how to write and send an email using the markdown editor.
+  </Card>
+</CardGroup>
+
+## 5. Analyze results and manage subscribers
+
+Analyze your results after sending, keep your lists safe, and extend into a CRM.
+
+<CardGroup cols={2}>
+  <Card title="Analyze email data" icon="magnifying-glass-chart" href="/metrics">
+    Learn how to manage and track email metrics including deliveries, open rates, and clicks.
+  </Card>
+  <Card title="Manage lists safely" icon="building-shield" href="/manage-lists">
+    Learn how to manage lists safely while protecting deliverability and domain reputation.
+  </Card>
+  <Card title="Turn subscribers into sales opportunities" icon="handshake" href="/crm">
+    Learn how to manage your Spread subscribers as customers.
   </Card>
 </CardGroup>
